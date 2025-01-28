@@ -18,8 +18,8 @@ echo INSTALL_FILENAME_LIST=!INSTALL_FILENAME_LIST!
 for %%F in (%INSTALL_FILENAME_LIST%) do (
 	if exist "%~dp0\install-appid\%%F" (
 		for /f "tokens=*" %%A in (%~dp0\install-appid\%%F) do (
-			echo %%A
-			@REM winget install --id %%A -s winget
+			@REM echo %%A
+			winget install --id %%A -s winget
 		)
 	) else (
 		echo File not found: %%F
