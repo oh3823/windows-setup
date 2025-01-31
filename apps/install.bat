@@ -18,6 +18,7 @@ echo INSTALL_FILENAME_LIST=!INSTALL_FILENAME_LIST!
 for %%F in (%INSTALL_FILENAME_LIST%) do (
 	if exist "%~dp0\install-appid\%%F" (
 		for /f "tokens=*" %%A in (%~dp0\install-appid\%%F) do (
+			echo "%%A" is being installed...
 			winget install --id %%A -s winget
 		)
 	) else (
