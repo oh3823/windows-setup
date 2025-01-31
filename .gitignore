@@ -1,0 +1,4 @@
+apps/install-appid/*
+apps/uninstall-appname/*
+!apps/install-appid/default
+!apps/uninstall-appname/default
